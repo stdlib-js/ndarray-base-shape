@@ -249,7 +249,7 @@ Copyright &copy; 2016-2023. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-shape/main/LICENSE
 
-[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/stdlib
+[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/ndarray-base-ctor
 
 </section>
 
