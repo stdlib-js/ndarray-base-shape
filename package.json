@@ -38,7 +38,8 @@
   },
   "dependencies": {
     "@stdlib/array-base-copy-indexed": "^0.2.0",
-    "@stdlib/types": "^0.3.1"
+    "@stdlib/types": "^0.3.1",
+    "@stdlib/error-tools-fmtprodmsg": "^0.2.0"
   },
   "devDependencies": {
     "@stdlib/assert-is-collection": "^0.2.0",
