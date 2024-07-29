@@ -45,32 +45,14 @@ limitations under the License.
 
 <!-- Package usage documentation. -->
 
-<section class="installation">
 
-## Installation
-
-```bash
-npm install @stdlib/ndarray-base-shape
-```
-
-Alternatively,
-
--   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
--   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
--   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
-
-The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
-
-To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
-
-</section>
 
 <section class="usage">
 
 ## Usage
 
 ```javascript
-var shape = require( '@stdlib/ndarray-base-shape' );
+import shape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-shape@deno/mod.js';
 ```
 
 #### shape( x, copy )
@@ -78,7 +60,7 @@ var shape = require( '@stdlib/ndarray-base-shape' );
 Returns the shape of a provided [ndarray][@stdlib/ndarray/base/ctor].
 
 ```javascript
-var zeros = require( '@stdlib/ndarray-zeros' );
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
 
 var x = zeros( [ 3, 2, 3 ] );
 // returns <ndarray>
@@ -90,7 +72,7 @@ var sh = shape( x, false );
 When `copy` is `false`, changes to the returned shape array may mutate the input [ndarray][@stdlib/ndarray/base/ctor] shape. If there is a chance that the returned shape will be mutated (either directly or by downstream consumers), set `copy` to `true` to prevent unintended side effects.
 
 ```javascript
-var zeros = require( '@stdlib/ndarray-zeros' );
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
 
 var x = zeros( [ 3, 2, 3 ] );
 // returns <ndarray>
@@ -125,11 +107,11 @@ var bool = ( x.shape === sh );
 <!-- eslint-disable new-cap -->
 
 ```javascript
-var zeros = require( '@stdlib/ndarray-zeros' );
-var slice = require( '@stdlib/ndarray-slice' );
-var E = require( '@stdlib/slice-multi' );
-var S = require( '@stdlib/slice-ctor' );
-var shape = require( '@stdlib/ndarray-base-shape' );
+import zeros from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-zeros@deno/mod.js';
+import slice from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-slice@deno/mod.js';
+import E from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-multi@deno/mod.js';
+import S from 'https://cdn.jsdelivr.net/gh/stdlib-js/slice-ctor@deno/mod.js';
+import shape from 'https://cdn.jsdelivr.net/gh/stdlib-js/ndarray-base-shape@deno/mod.js';
 
 // Create an array:
 var x = zeros( [ 10, 10, 10, 10 ] );
@@ -191,7 +173,7 @@ for ( i = 0; i < slices.length; i++ ) {
 
 ## Notice
 
-This package is part of [stdlib][stdlib], a standard library for JavaScript and Node.js, with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
+This package is part of [stdlib][stdlib], a standard library with an emphasis on numerical and scientific computing. The library provides a collection of robust, high performance libraries for mathematics, statistics, streams, utilities, and more.
 
 For more information on the project, filing bug reports and feature requests, and guidance on how to develop [stdlib][stdlib], see the main project [repository][stdlib].
 
@@ -254,7 +236,7 @@ Copyright &copy; 2016-2024. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/ndarray-base-shape/main/LICENSE
 
-[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/ndarray-base-ctor
+[@stdlib/ndarray/base/ctor]: https://github.com/stdlib-js/ndarray-base-ctor/tree/deno
 
 </section>
 
