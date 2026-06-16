@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2023 The Stdlib Authors.
@@ -16,37 +16,32 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var copyIndexed = require( '@stdlib/array-base-copy-indexed' );
-
-
-// MAIN //
+import { ndarray, Shape } from '@stdlib/types/ndarray';
 
 /**
 * Returns the shape of a provided ndarray.
 *
-* @param {ndarrayLike} x - input ndarray
-* @param {boolean} copy - boolean indicating whether to explicitly copy the value assigned to the input ndarray's `shape` property
-* @returns {NonNegativeIntegerArray} shape
+* ## Notes
+*
+* -   When `copy` is `false`, changes to the returned shape array may mutate the input ndarray shape. If there is a chance that the returned shape will be mutated (either directly or by downstream consumers), set `copy` to `true` to prevent unintended side effects.
+*
+* @param x - input ndarray
+* @param copy - boolean indicating whether to explicitly copy the value assigned to the input ndarray's `shape` property
+* @returns shape
 *
 * @example
 * var zeros = require( '@stdlib/ndarray-zeros' );
 *
-* var out = shape( zeros( [ 3, 3, 3 ] ), false );
+* var sh = shape( zeros( [ 3, 3, 3 ] ), false );
 * // returns [ 3, 3, 3 ]
 */
-function shape( x, copy ) {
-	var sh = x.shape;
-	if ( copy ) {
-		return copyIndexed( sh );
-	}
-	return sh;
-}
+declare function shape( x: ndarray, copy: boolean ): Shape;
 
 
 // EXPORTS //
 
-module.exports = shape;
+export = shape;
